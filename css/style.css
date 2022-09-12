@@ -1,0 +1,576 @@
+/* ================================= Start  Global Rules ================================= */
+:root {
+  --main-color: #e65f78;
+  --transition: all 0.5s ease-in-out;
+  --p-color: rgba(255, 255, 255, 0.651);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================================= End  Global Rules ================================= */
+
+/* ================================= Start  Navbar ================================= */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-item {
+  padding: 0 0.9rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: white;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--main-color) !important;
+}
+
+.navbar-toggler {
+  border: 0.5px solid white;
+}
+
+.navbar-toggler i {
+  font-size: 2rem;
+  color: white;
+}
+
+button:focus:not(:focus-visible) {
+  color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* ================================= End  Navbar ================================= */
+
+/* ================================= Start  Home ================================= */
+.home {
+  background-image: url(../img/header-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.home .container h3 {
+  font-weight: 200;
+  margin: 1.5rem 0rem;
+}
+
+.home .container h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.home .container p {
+  width: 50%;
+  margin: 1.5rem 0rem;
+  line-height: 1.8;
+  font-weight: 100;
+  color: var(--p-color);
+}
+
+@media screen and (max-width: 500px) {
+  .home .container p {
+    width: 100%;
+  }
+}
+
+.home .icon {
+  bottom: 0%;
+  width: 30px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  animation: move 1.5s cubic-bezier(0.74, 0.28, 0.62, 0.97) infinite;
+  -webkit-animation: move 1.5s cubic-bezier(0.74, 0.28, 0.62, 0.97) infinite;
+}
+
+.home .icon::after {
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.home .btn-cv {
+  color: white;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 1rem 3rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.home .btn-cv:hover {
+  color: #808882;
+  background-color: white;
+}
+
+@keyframes move {
+  0% {
+    bottom: 0px;
+  }
+
+  25% {
+    bottom: 15px;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  75% {
+    bottom: 25px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
+}
+
+/* ================================= End  Home ================================= */
+
+/* ================================= Start  About ================================= */
+.about .information h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 0rem;
+}
+
+.about .information h2 span {
+  font-weight: 200;
+}
+
+.about .information h3 {
+  font-weight: 200;
+  padding: 0.5rem 0rem;
+}
+
+.about .information h3 span {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.about .information p {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.about .information .icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid rgba(5, 5, 5, 0.651);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.about .information .icon:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+/* ================================= End  About ================================= */
+
+/* ================================= Star  services ================================= */
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.services h2 span {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.services h2+P {
+  width: 50%;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.services .card .icon {
+  font-size: 3rem;
+  padding: 0.5rem 0rem;
+  color: var(--main-color);
+}
+
+.services .card h3 {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.services .card h3::after {
+  content: "";
+  background-color: var(--main-color);
+  height: 3px;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.services .card:hover h3::after {
+  width: 30%;
+}
+
+.services .card p {
+  padding: 0.5rem 0rem;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+@media screen and (max-width: 500px) {
+  .services h2+P {
+    width: 100%;
+  }
+}
+
+/* ================================= End  services ================================= */
+
+/* ================================= Start  Client ================================= */
+.client h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.client h2 span {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.client h2+P {
+  width: 50%;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.client .comment i {
+  font-size: 4rem;
+  padding: 1rem 0rem 2rem;
+  color: var(--main-color);
+}
+
+.client .comment p {
+  width: 70%;
+  margin: 0% auto;
+  text-align: center;
+  color: rgba(5, 5, 5, 0.651);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--main-color);
+  width: 20px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+
+  .client .comment p,
+  .client h2+P {
+    width: 100% !important; 
+  }
+}
+
+
+/* ================================= End  Client ================================= */
+
+
+/* ================================= Start  portfolio ================================= */
+.portfolio h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.portfolio h2 span {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.portfolio h2+P {
+  width: 50%;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.portfolio .card .text,
+.portfolio .card img {
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.portfolio .card:hover .text {
+  top: 0 !important;
+  opacity: 1 !important;
+}
+
+.portfolio .card:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.portfolio .nav-pills .nav-link {
+  color: black;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+.portfolio .nav-link.active,
+.portfolio .nav-link:hover {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 500px) {
+
+  .portfolio h2+P {
+    width: 100%;
+  }
+}
+
+/* ================================= End  portfolio ================================= */
+
+/* ================================= End  Blog ================================= */
+.blog h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.blog h2 span {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.blog h2+P {
+  width: 50%;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.blog .text {
+  padding: 1rem;
+}
+
+.blog .text h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.blog .text p {
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.blog .text p a {
+  color: var(--main-color);
+  font-weight: 900;
+}
+
+.blog .text a {
+  color: rgba(5, 5, 5, 0.651);
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .blog h2+P {
+    width: 100%;
+  }
+}
+
+/* ================================= End  Blog ================================= */
+
+/* ================================= Start  Contact ================================= */
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.contact h2 span {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.contact h2+P {
+  width: 50%;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-weight: 100;
+  color: rgba(5, 5, 5, 0.651);
+}
+
+.contact .icon {
+  padding: 1rem;
+}
+
+.contact .icon i {
+  color: var(--main-color);
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+.contact .icon h6 {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+}
+
+.form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+
+  .contact h2+P {
+    width: 100%;
+  }
+}
+
+/* ================================= End  Contact ================================= */
+
+/* ================================= End  Contact ================================= */
+.footer {
+  background-color: #212121;
+  color: var(--p-color);
+}
+
+.footer .social .icon {
+  color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #313131;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  display: grid;
+  place-items: center;
+}
+
+.footer .social .icon:hover {
+  color: var(--main-color);
+}
+
+/* ================================= End  Contact ================================= */
+
+@media screen and (max-width: 992px) and (min-width : 501px) {
+  .services h2+P,
+  .blog h2+P,
+  .contact h2+P,
+  .services h2+P,
+  .services h2+P
+   {
+    width: 100%;
+  }
+}
